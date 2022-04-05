@@ -1,0 +1,63 @@
+﻿<Window x:Class="PZ_7_htlfrnjh.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PZ_7_htlfrnjh"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        
+        >
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top">
+            <Menu Background="#FFB9B6B6" MaxHeight="20" Height="20">
+                <MenuItem Header="File" Click="MenuItem_Click">
+                    <MenuItem Header="open"></MenuItem>
+                    <MenuItem Header="new" x:Name="Button_new" Click="Button_Click_new"></MenuItem>
+                    <MenuItem Header="save" x:Name="Button_save"
+                        Click="Button_Click_save"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Sample">
+                    <MenuItem Header="Create"></MenuItem>
+                    <MenuItem Header="Load"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="About">
+                    <MenuItem Header="About program"></MenuItem>
+                    <MenuItem Header="About program"></MenuItem>
+                </MenuItem>
+            </Menu>
+        </StackPanel>
+
+
+        <WrapPanel DockPanel.Dock="Top" Height="20">
+            <Button>
+                <Image Source="Icons/trash.png"></Image>
+            </Button>
+
+            <Button>
+                <Image Source="Icons/bold.png"></Image>
+            </Button>
+
+            <Button>
+                <Image Source="Icons/kursiv.png"></Image>
+            </Button>
+
+            <Button>
+                <Image Source="Icons/подчеркнутый.png" RenderTransformOrigin="14.614,0.962"></Image>
+            </Button>
+        </WrapPanel>
+        
+        
+        
+        <StatusBar DockPanel.Dock="Bottom" Height="15"></StatusBar>
+
+        <ListBox Width="200" DockPanel.Dock="Left" Name="phonesList">
+            <TextBlock FontWeight="Bold" TextDecorations="Underline" Text="Твои файлы бро" />
+            <ListBoxItem Background="LightGray">f</ListBoxItem>
+
+
+        </ListBox>
+        <TextBox x:Name ="txtEditor" AcceptsReturn="True"></TextBox>
+        
+    </DockPanel>
+</Window>
